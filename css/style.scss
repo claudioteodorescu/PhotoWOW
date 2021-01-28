@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  pointer-events: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  font-family: "Economica", sans-serif;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: rgb(74, 68, 131);
+  color: white;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background: rgb(114, 107, 172);
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  justify-content: center;
+  align-items: center;
+  #logo {
+    font-family: "Economica", sans-serif;
+    color: black;
+    font-size: 3.5rem;
+    span.container {
+      display: inline-flex;
+      overflow: hidden;
+      background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+      span.gradient {
+        mix-blend-mode: screen;
+        background-color: white;
+        font-size: 2.5rem;
+      }
+    }
+  }
+  h2 {
+    padding: 2rem;
+  }
+  .search-form {
+    padding: 2rem;
+    display: flex;
+    input {
+      font-size: 2rem;
+      padding: 0.5rem;
+      width: 100%;
+      border: 2px solid rgb(74, 68, 131);
+    }
+    button {
+    }
+  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 2rem 0rem;
+  width: 95%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 3rem;
+}
+
+.gallery-img {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 0.5rem 0rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.6);
+  a {
+    color: rgb(165, 165, 165);
+    font-weight: bold;
+    font-size: 4rem;
+    transition: all 0.5s ease;
+    &:hover {
+      color: white;
+      transition: all 0.5s ease;
+    }
+  }
+  p {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: gray;
+  }
+}
+
+.gallery-img:hover .gallery-info {
+  opacity: 1;
+}
+
+.load-btn {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .more {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+    input {
+      margin: 10px 0;
+    }
+  }
+}
