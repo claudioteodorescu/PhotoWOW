@@ -4,4 +4,3 @@ Responsive Website created with JS using Pexels.com API
 Get Unlimited High-Quality Photos
 
 
-
